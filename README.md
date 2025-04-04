@@ -6,7 +6,7 @@ A FastAPI application that opens a LinkedIn URL, transcribes a voice memo from a
 
 - Voice memo recording interface
 - Automatic transcription using OpenAI's Whisper API
-- Google Sheets ([example]([url]("https://docs.google.com/spreadsheets/d/1xijRtA-wbrdRxIgsvD2pmxvnh-kqKVUwl4tt04sgads/edit?usp=sharing)")) integration for storing transcriptions
+- Google Sheets ([example](https://docs.google.com/spreadsheets/d/1xijRtA-wbrdRxIgsvD2pmxvnh-kqKVUwl4tt04sgads/edit?usp=sharing)) integration for storing transcriptions
 - Background processing of transcriptions
 
 ## Prerequisites
