@@ -1,0 +1,47 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rod's Personal Voice Memos</title>
+  <script src="/static/script.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+    th, td { border: 1px solid #ddd; padding: 8px; }
+    th { background-color: #f2f2f2; }
+    #status { margin-top: 20px; font-weight: bold; }
+    button { margin-right: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Rod's Personal Voice Memos</h1>
+  {% if record and record.row %}
+  <table>
+    <tr>
+      <th>URL</th>
+      <th>Company</th>
+      <th>Connected On</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Recording</th>
+    </tr>
+    <tr>
+      <td id="record-url">{{ record.url }}</td>
+      <td id="record-company">{{ record.company }}</td>
+      <td id="record-connected">{{ record.connected_on }}</td>
+      <td id="record-first">{{ record.first_name }}</td>
+      <td id="record-last">{{ record.last_name }}</td>
+      <td id="record-recording">{{ record.recording }}</td>
+    </tr>
+  </table>
+  <!-- Hidden element to store the current row number -->
+  <div id="record-row" style="display: none;">{{ record.row }}</div>
+  <button id="start-recording">Start Recording</button>
+  <button id="done-next" disabled>Done & Next</button>
+  {% else %}
+  <p>All records have been processed.</p>
+  {% endif %}
+  <div id="status"></div>
+</body>
+</html>
